@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--消息标题-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/blue"
+        android:orientation="horizontal">
+        <!--返回箭头-->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.5"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+        <!--消息-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="我  的  建  议"
+                android:textColor="@color/word"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--建议科目-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:text="科 目 :"/>
+
+        <Spinner
+            android:id="@+id/sugest_subject"
+            android:layout_width="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="40dp"
+            android:layout_weight="4"  />
+    </LinearLayout>
+    <!--    间隔线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CFCFCF" />
+    <!--主题-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:text="主 题 :"/>
+
+        <EditText
+            android:id="@+id/sugest_theme"
+            android:layout_width="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="40dp"
+            android:layout_weight="4"
+            android:hint="请输入主题"/>
+    </LinearLayout>
+    <!--    间隔线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CFCFCF" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:text="建 议 :"/>
+
+        <EditText
+            android:id="@+id/sugest_advice"
+            android:layout_width="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="4"
+            android:hint="请输入建议"/>
+    </LinearLayout>
+    <!--    间隔线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CFCFCF" />
+
+    <Button
+        android:id="@+id/sugest_report"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@color/blue"
+        android:text="发 表 建 议"
+        android:textColor="@color/word" />
+</LinearLayout>

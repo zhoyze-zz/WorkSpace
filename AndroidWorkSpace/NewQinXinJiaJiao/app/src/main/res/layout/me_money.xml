@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--我的订单-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_selected_texiao"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/order"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selected_texiao"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/dingdan"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:text="我的订单"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+    <!--我的钱包-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_selected_texiao"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/money"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selected_texiao"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/wallet"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:text="我的钱包"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+    <!--我的奖学券-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:background="@drawable/button_selected_texiao"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/reward"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selected_texiao"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/quan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="奖学券"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city_name">
+        <item name="北京"></item>
+        <item name="南京"></item>
+        <item name="哈哈哈"></item>
+        <item name="啊啊啊"></item>
+    </string-array>
+</resources>

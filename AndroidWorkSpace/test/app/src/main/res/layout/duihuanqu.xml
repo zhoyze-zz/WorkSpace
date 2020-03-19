@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余积分："
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textjifen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10积分" />
+
+        <Button
+            android:id="@+id/button01"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="一元红包" />
+
+        <Button
+            android:id="@+id/button02"
+            android:background="@drawable/btn_bg"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:text="暂无" />
+
+        <Button
+            android:id="@+id/button03"
+            android:background="@drawable/btn_bg"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:text="暂无" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="50积分" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="70dp"
+            android:background="@drawable/btn_bg"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="蔬菜饼" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="70dp"
+            android:background="@drawable/btn_bg"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="煎饼" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="70dp"
+            android:background="@drawable/btn_bg"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:text="鸡蛋灌饼" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="100积分" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="70dp"
+            android:background="@drawable/btn_bg"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="桥头排骨" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="70dp"
+            android:background="@drawable/btn_bg"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="无骨鸡爪" />
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="70dp"
+            android:background="@drawable/btn_bg"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:text="小卤菜" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="150积分" />
+
+        <Button
+            android:id="@+id/button31"
+            android:background="@drawable/btn_bg"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="啵啵鱼" />
+
+        <Button
+            android:id="@+id/button32"
+            android:background="@drawable/btn_bg"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:text="黄焖鸡" />
+
+        <Button
+            android:id="@+id/button33"
+            android:background="@drawable/btn_bg"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:text="猪蹄煲" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="200积分" />
+
+        <Button
+            android:id="@+id/button41"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:text="眼线笔" />
+
+        <Button
+            android:id="@+id/button42"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_bg"
+            android:layout_weight="1"
+            android:text="烫睫毛器" />
+
+        <Button
+            android:id="@+id/button43"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/btn_bg"
+            android:layout_weight="1"
+            android:text="暂无" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="250积分" />
+
+        <Button
+            android:id="@+id/button51"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="自助餐" />
+
+        <Button
+            android:id="@+id/button52"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="牛排" />
+
+        <Button
+            android:id="@+id/button53"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:text="火锅" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="300积分" />
+
+        <Button
+            android:id="@+id/button61"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_bg"
+            android:layout_weight="1"
+            android:text="海底捞" />
+
+        <Button
+            android:id="@+id/button62"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:text="小裙子" />
+
+        <Button
+            android:id="@+id/button63"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:text="烤肉" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1000积分"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button71"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="5dp"
+            android:text="任意愿望"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

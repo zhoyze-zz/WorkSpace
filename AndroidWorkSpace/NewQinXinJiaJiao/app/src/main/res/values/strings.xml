@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewQinXinJiaJiao</string>
+    <string name="title_home">首页</string>
+    <string name="title_Search">找老师</string>
+    <string name="title_notifications">消息</string>
+    <string name="title_me">我</string>
+    <string name="title_activity_navigational">Navigational</string>
+    <string name="title_dashboard">Dashboard</string>
+</resources>

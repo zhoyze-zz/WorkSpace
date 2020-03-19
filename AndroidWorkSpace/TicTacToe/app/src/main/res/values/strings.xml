@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="long_app_name">Ultimate Tic Tac Toc</string>
+    <string name="action_settings">Setting</string>
+    <string name="continue_lable">Continue</string>
+    <string name="new_game_lable">New Game</string>
+    <string name="about_lable">About</string>
+    <string name="ok_lable">OK</string>
+    <string name="about_title">About Ultimate Tic Tac Toe</string>
+    <string name="about_text">\
+    This game is played just like regular Tic Tac Toe with one difference:to win a titel you have to win a smaller game of Tic Tac Toe inside that title.\n\n\
+    A tie happens when there are no further moves. In the case of a tie in a small board,that will count as a win for both sides in the larger game
+    </string>
+</resources>

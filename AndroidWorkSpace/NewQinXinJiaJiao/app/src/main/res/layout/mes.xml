@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!--    消息标题-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/blue"
+        android:orientation="horizontal">
+        <!--        返回箭头-->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.5"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+        <!--        消息-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="消 息 通 知"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--    预约教师信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/wodelaoshi" />
+
+        <TextView
+            android:id="@+id/order_teach"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selected_texiao"
+            android:layout_marginLeft="15dp"
+
+            android:layout_weight="5"
+
+            android:text="预约老师信息"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </LinearLayout>
+    <!--    我要提建议-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/pingjia" />
+
+        <TextView
+            android:id="@+id/order_suggest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/button_selected_texiao"
+            android:layout_weight="5"
+            android:text="我要提建议"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </LinearLayout>
+    <!--    消息论坛-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/xinxiaoxi" />
+
+        <TextView
+            android:id="@+id/order_talk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/button_selected_texiao"
+            android:layout_weight="5"
+            android:text="消息论坛"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </LinearLayout>
+    <!--    优惠信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/youhuihhh" />
+
+        <TextView
+            android:id="@+id/order_cheaper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="5"
+            android:background="@drawable/button_selected_texiao"
+            android:text="优惠信息"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </LinearLayout>
+</LinearLayout>

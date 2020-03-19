@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevation_high">8dp</dimen>
+    <dimen name="stroke_width">1dp</dimen>
+    <dimen name="corrner_radius">4dp</dimen>
+    <dimen name="menu_padding">10dp</dimen>
+    <dimen name="menu_space">10dp</dimen>
+    <dimen name="menu_text_size"></dimen>
+    <dimen name="menu_button_margin"></dimen>
+    <dimen name="menu_button_padding"></dimen>
+</resources>
