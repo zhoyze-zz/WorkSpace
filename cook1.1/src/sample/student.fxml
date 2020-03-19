@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="我  要  借  书">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <ImageView fitHeight="577.0" fitWidth="861.0" layoutX="-30.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                       <image>
+                           <Image url="@../resource/beijin.png" />
+                       </image>
+                   </ImageView>
+                  <Button layoutX="618.0" layoutY="112.0" mnemonicParsing="false" onMouseClicked="#Ssearch" prefHeight="26.0" prefWidth="168.0" text="查 找" />
+                  <ChoiceBox fx:id="bookkind" layoutX="104.0" layoutY="78.0" prefHeight="23.0" prefWidth="170.0">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="不限" />
+                              <String fx:value="医学" />
+                              <String fx:value="计算机" />
+                              <String fx:value="工具书" />
+                              <String fx:value="哲学" />
+                              <String fx:value="社会科学" />
+                              <String fx:value="政治" />
+                              <String fx:value="法律" />
+                              <String fx:value="军事" />
+                              <String fx:value="经济" />
+                              <String fx:value="语言文字" />
+                              <String fx:value="文学" />
+                              <String fx:value="地理" />
+                              <String fx:value="历史" />
+                              <String fx:value="数学" />
+                          </FXCollections>
+                      </items>
+                  </ChoiceBox>
+                  <Label layoutX="14.0" layoutY="78.0" text="图书类别：">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="288.0" layoutY="113.0" text="输入框：">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <TextField fx:id="bookname" layoutX="356.0" layoutY="113.0" prefHeight="23.0" prefWidth="249.0" />
+                  <Text fill="#189bb8" fontSmoothingType="LCD" layoutX="325.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图 书 查 询" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="253.0" layoutY="43.0" text="查询方式：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="searchkind" layoutX="356.0" layoutY="43.0" prefHeight="23.0" prefWidth="170.0">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="按书名查找" />
+                              <String fx:value="按出版社查找" />
+                              <String fx:value="按书类别查找" />
+                              <String fx:value="按作者查找" />
+                              <String fx:value="高级查找" />
+                          </FXCollections>
+                      </items>
+                  </ChoiceBox>
+                  <TableView fx:id="usersearchtable" layoutY="146.0" onMouseClicked="#usersearchtableclick" opacity="0.95" prefHeight="425.0" prefWidth="800.0">
+                    <columns>
+                      <TableColumn fx:id="Bno" prefWidth="75.0" text="图书编号" />
+                      <TableColumn fx:id="Bkind" prefWidth="99.33332824707031" text="图书类别" />
+                      <TableColumn fx:id="Bname" prefWidth="229.33331298828125" text="图书名称" />
+                      <TableColumn fx:id="Bpub" prefWidth="184.66668701171875" text="出版社" />
+                      <TableColumn fx:id="Bprice" prefWidth="81.66668701171875" text="价格" />
+                      <TableColumn fx:id="Bleft" prefWidth="130.33331298828125" text="图书状态" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="13.0" layoutY="113.0" text="价       格：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pricelow" layoutX="104.0" layoutY="113.0" prefHeight="23.0" prefWidth="67.0" text="0" />
+                  <TextField fx:id="pricehigh" layoutX="209.0" layoutY="113.0" prefHeight="23.0" prefWidth="66.0" text="100" />
+                  <Label layoutX="182.0" layoutY="98.0" text="-">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="594.0" layoutY="12.0" text="提示：点击图书名称以查看详细信息" />
+                  <Label layoutX="14.0" layoutY="43.0" text="所选书名：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="104.0" layoutY="43.0" prefHeight="15.0" prefWidth="171.0" text="尚未选择">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="288.0" layoutY="78.0" text="藏书处：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="libkind" layoutX="356.0" layoutY="78.0" prefWidth="170.0">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="不限" />
+                           <String fx:value="江大图书馆" />
+                           <String fx:value="镇江图书馆" />
+                           <String fx:value="北固图书馆" />
+                       </FXCollections>
+                   </items>
+               </ChoiceBox>
+                  <Label layoutX="546.0" layoutY="78.0" text="出版社：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="pubkind" layoutX="616.0" layoutY="78.0" prefWidth="170.0">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="不限" />
+                           <String fx:value="江苏大学出版社" />
+                           <String fx:value="高等教育出版社" />
+                           <String fx:value="人民出版社" />
+                           <String fx:value="红星出版社" />
+                       </FXCollections>
+                   </items>
+               </ChoiceBox>
+                  <Label layoutX="544.0" layoutY="43.0" text="状    态：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="statuekind" layoutX="615.0" layoutY="43.0" prefWidth="170.0">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="不限" />
+                           <String fx:value="可借" />
+                           <String fx:value="借出" />
+                       </FXCollections>
+                   </items>
+               </ChoiceBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab onSelectionChanged="#myborrow" text="我  的  借  阅">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <ImageView fitHeight="577.0" fitWidth="861.0" layoutX="-30.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                       <image>
+                           <Image url="@../resource/beijin.png" />
+                       </image>
+                   </ImageView>
+                  <Label layoutX="319.0" layoutY="13.0" text="我   的   借   阅" textFill="#379dcd">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="userborrowtable" layoutY="56.0" onMouseClicked="#userborrowtableclick" opacity="0.95" prefHeight="515.0" prefWidth="800.0">
+                    <columns>
+                      <TableColumn fx:id="Bno2" prefWidth="78.66667413711548" text="图书编号" />
+                      <TableColumn fx:id="Bkind2" prefWidth="67.99996185302734" text="图书类别" />
+                        <TableColumn fx:id="Bname2" prefWidth="214.00001525878906" text="书名" />
+                        <TableColumn fx:id="Bauther2" minWidth="9.999969482421875" prefWidth="91.33334350585938" text="作者" />
+                        <TableColumn fx:id="Bpub2" prefWidth="121.33328247070312" text="出版社" />
+                        <TableColumn fx:id="Bprice2" prefWidth="50.0" text="价格" />
+                        <TableColumn fx:id="Boutdate" prefWidth="92.0" text="借阅日期" />
+                        <TableColumn fx:id="Bindate" prefWidth="88.0" text="应还日期" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab onSelectionChanged="#mydateclick" text="个  人  信  息">
+          <content>
+              <AnchorPane fx:id="Sborrownum" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <ImageView fitHeight="577.0" fitWidth="861.0" layoutX="-30.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                       <image>
+                           <Image url="@../resource/beijin.png" />
+                       </image>
+                   </ImageView>
+                  <Label layoutX="261.0" layoutY="42.0" text="学    号：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="snum" layoutX="377.0" layoutY="42.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="261.0" layoutY="80.0" text="姓    名：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sname" layoutX="377.0" layoutY="80.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="261.0" layoutY="115.0" text="借书数量：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sborrownum" layoutX="377.0" layoutY="115.0" text="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="261.0" layoutY="149.0" text="年级：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sgrade" layoutX="377.0" layoutY="149.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="261.0" layoutY="185.0" text="学院：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sxueyuan" layoutX="377.0" layoutY="185.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sphone" layoutX="377.0" layoutY="221.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="255.0" layoutY="276.0" mnemonicParsing="false" onMouseClicked="#relogin" text="重新登录">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="touxiang" fitHeight="121.0" fitWidth="131.0" layoutX="73.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/nanhaitouxiang.png" />
+                     </image></ImageView>
+                  <Label layoutX="261.0" layoutY="221.0" text="电话：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="770.0" layoutY="557.0" text="Label" />
+               </children></AnchorPane>
+          </content>
+      </Tab>
+  </tabs>
+</TabPane>

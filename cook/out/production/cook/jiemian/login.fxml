@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnlogin" layoutX="157.0" layoutY="217.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="87.0" text="登   录" />
+      <ChoiceBox layoutX="164.0" layoutY="98.0" prefHeight="23.0" prefWidth="161.0" />
+      <PasswordField layoutX="164.0" layoutY="173.0" />
+      <Label layoutX="71.0" layoutY="177.0" text="密       码" />
+      <Label layoutX="70.0" layoutY="139.0" text="用  户  名" />
+      <Label layoutX="71.0" layoutY="102.0" text="用户类型" />
+      <TextField layoutX="164.0" layoutY="135.0" />
+      <Text layoutX="73.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书管理系统登录">
+         <font>
+            <Font name="System Italic" size="32.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

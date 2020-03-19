@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+   <children>
+      <ImageView fitHeight="448.0" fitWidth="707.0" layoutX="-18.0" layoutY="-43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/beijin.png" />
+         </image></ImageView>
+      <Button layoutX="276.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#loginclick" prefHeight="39.0" prefWidth="87.0" text="登   录" />
+      <ChoiceBox fx:id="cbuserkind" layoutX="286.0" layoutY="113.0" prefHeight="23.0" prefWidth="161.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="学生" />
+               <String fx:value="图书管理员" />
+               <String fx:value="用户管理员" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <PasswordField fx:id="pasword" layoutX="286.0" layoutY="197.0" promptText="123456" />
+      <Label layoutX="176.0" layoutY="199.0" text="密       码:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="175.0" layoutY="157.0" text="用  户  名:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="176.0" layoutY="115.0" text="用户类型:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Text layoutX="191.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图书管理系统登录">
+         <font>
+            <Font name="System Italic" size="32.0" />
+         </font>
+      </Text>
+      <TextField fx:id="yonghuming" layoutX="286.0" layoutY="155.0" promptText="3170611050" />
+
+   </children>
+</Pane>

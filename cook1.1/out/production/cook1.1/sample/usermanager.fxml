@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="学  生  用  户  信  息 ">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <ImageView fitHeight="577.0" fitWidth="861.0" layoutX="-30.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                       <image>
+                           <Image url="@../resource/beijin.png" />
+                       </image>
+                   </ImageView>
+                  <Button layoutX="595.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#UMstudentsearch" prefHeight="28.0" prefWidth="156.0" text="筛  选" />
+                  <ChoiceBox fx:id="studentgrade" layoutX="296.0" layoutY="19.0" prefHeight="23.0" prefWidth="83.0">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="大一" />
+                              <String fx:value="大二" />
+                              <String fx:value="大三" />
+                              <String fx:value="大四" />
+                          </FXCollections>
+                      </items>
+                  </ChoiceBox>
+                  <Label layoutX="242.0" layoutY="19.0" text="年级：">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="57.0" text="输入框：">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <TextField fx:id="bookname" layoutX="104.0" layoutY="57.0" prefHeight="23.0" prefWidth="441.0" />
+                  <Label layoutX="14.0" layoutY="19.0" text="查询方式：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="searchkind" layoutX="104.0" layoutY="19.0" prefHeight="23.0" prefWidth="125.0">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="按学号查找" />
+                              <String fx:value="按姓名查找" />
+                              <String fx:value="综合查找" />
+                          </FXCollections>
+                      </items>
+                  </ChoiceBox>
+                  <TableView fx:id="stuedentusertable" layoutY="100.0" onMouseClicked="#UMstudentsearchtableclick" opacity="0.95" prefHeight="471.0" prefWidth="800.0">
+                    <columns>
+                      <TableColumn fx:id="Snum" prefWidth="75.0" text="学号" />
+                      <TableColumn fx:id="Sname" prefWidth="120.33332824707031" text="姓名" />
+                      <TableColumn fx:id="Sgrade" prefWidth="74.0" text="年级" />
+                      <TableColumn fx:id="Spswd" prefWidth="157.99996948242188" text="密码" />
+                      <TableColumn fx:id="Sxueyuan" prefWidth="75.0" text="学院" />
+                      <TableColumn fx:id="Ssex" prefWidth="102.6666259765625" text="性别" />
+                      <TableColumn fx:id="Sbnum" prefWidth="72.66668701171875" text="借书数" />
+                      <TableColumn fx:id="Sphone" prefWidth="120.66665649414062" text="电话" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="594.0" layoutY="54.0" mnemonicParsing="false" onMouseClicked="#UMstudentshowall" prefHeight="29.0" prefWidth="157.0" text="查看所有" />
+                  <Label layoutX="392.0" layoutY="19.0" text="学院：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="studentxueyuan" layoutX="446.0" layoutY="20.0" prefHeight="23.0" prefWidth="99.0">
+                       <items>
+                           <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="计算机学院" />
+                               <String fx:value="医学院" />
+                               <String fx:value="汽车学院" />
+                               <String fx:value="电气学院" />
+                           </FXCollections>
+                       </items>
+                   </ChoiceBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+
+    <Tab text="学  生  用  户  管  理">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                      <ImageView fitHeight="577.0" fitWidth="861.0" layoutX="-30.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../resource/beijin.png" />
+                          </image>
+                      </ImageView>
+                      <Button layoutX="533.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#UMstudentmanagexecute" prefHeight="28.0" prefWidth="100.0" text="执    行">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
+                      <Label layoutX="14.0" layoutY="57.0" text="学       号：">
+                          <font>
+                              <Font size="18.0" />
+                          </font></Label>
+                      <TextField fx:id="managesnum" layoutX="104.0" layoutY="57.0" prefWidth="150.0" />
+                      <Label layoutX="14.0" layoutY="19.0" text="选择操作：">
+                          <font>
+                              <Font size="18.0" />
+                          </font>
+                      </Label>
+                      <ChoiceBox fx:id="searchkind2" layoutX="104.0" layoutY="19.0" prefWidth="150.0">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="增加" />
+                                  <String fx:value="修改" />
+                                  <String fx:value="删除" />
+                              </FXCollections>
+                          </items>
+                      </ChoiceBox>
+                      <TableView fx:id="managestudentusertable" layoutY="181.0" onMouseClicked="#UMstudentmanagetableclick" opacity="0.95" prefHeight="390.0" prefWidth="800.0">
+                          <columns>
+                              <TableColumn fx:id="Snum2" prefWidth="75.0" text="学号" />
+                              <TableColumn fx:id="Sname2" prefWidth="120.33332824707031" text="姓名" />
+                              <TableColumn fx:id="Sgrade2" prefWidth="74.0" text="年级" />
+                              <TableColumn fx:id="Spswd2" prefWidth="157.99996948242188" text="密码" />
+                              <TableColumn fx:id="Sxueyuan2" prefWidth="75.0" text="学院" />
+                              <TableColumn fx:id="Ssex2" prefWidth="102.6666259765625" text="性别" />
+                              <TableColumn fx:id="Sbnum2" prefWidth="72.66668701171875" text="借书数" />
+                              <TableColumn fx:id="Sphone2" prefWidth="120.66665649414062" text="电话" />                         
+                          </columns>
+                      </TableView>
+                      <Button layoutX="664.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#UMstudentmanageshowall" prefHeight="29.0" prefWidth="100.0" text="查看所有用户">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
+                  <Label layoutX="270.0" layoutY="57.0" text="姓      名：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="managesname" layoutX="352.0" layoutY="57.0" prefWidth="150.0" />
+                  <TextField fx:id="managespswd" layoutX="104.0" layoutY="97.0" prefWidth="150.0" />
+                  <TextField fx:id="managesxueyuan" layoutX="352.0" layoutY="97.0" prefWidth="150.0" />
+                  <TextField fx:id="managesborrownum" editable="false" layoutX="103.0" layoutY="138.0" prefWidth="150.0" />
+                  <TextField fx:id="managesphone" layoutX="352.0" layoutY="138.0" prefWidth="150.0" />
+                  <TextField fx:id="managessex" layoutX="614.0" layoutY="95.0" prefWidth="150.0" />
+                  <TextField fx:id="managesgrade" layoutX="614.0" layoutY="57.0" prefWidth="150.0" />
+                  <Label layoutX="16.0" layoutY="97.0" text="密      码：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="138.0" text="借书数量：">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="271.0" layoutY="97.0" text="学      院：">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="270.0" layoutY="138.0" text="电      话：">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="530.0" layoutY="57.0" text="年       级：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="532.0" layoutY="97.0" text="性      别：">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="267.0" layoutY="19.0" text="所选用户名：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selectusername" layoutX="372.0" layoutY="21.0" text="尚未选择">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  </children></AnchorPane>
+          </content>
+      </Tab>
+
+    <Tab text="图  书  管  理  员  信  息">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                      <ImageView fitHeight="577.0" fitWidth="861.0" layoutX="-30.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../resource/beijin.png" />
+                          </image>
+                      </ImageView>
+                      <Button layoutX="595.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#UMbookmanagesearch" prefHeight="28.0" prefWidth="156.0" text="筛  选" />
+                      <Label layoutX="14.0" layoutY="57.0" text="输入框：">
+                          <font>
+                              <Font size="18.0" />
+                          </font></Label>
+                      <TextField fx:id="bookname2" layoutX="104.0" layoutY="57.0" prefHeight="23.0" prefWidth="441.0" />
+                      <Label layoutX="14.0" layoutY="19.0" text="查询方式：">
+                          <font>
+                              <Font size="18.0" />
+                          </font>
+                      </Label>
+                      <ChoiceBox fx:id="searchkind3" layoutX="104.0" layoutY="19.0" prefHeight="23.0" prefWidth="125.0">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="按编号查找" />
+                                  <String fx:value="按姓名查找" />
+                                  <String fx:value="按图书馆查找" />
+                              </FXCollections>
+                          </items>
+                      </ChoiceBox>
+                      <TableView fx:id="BMusertable" layoutY="100.0" onMouseClicked="#UMbookmanagesearchtableclick" opacity="0.95" prefHeight="471.0" prefWidth="800.0">
+                          <columns>
+                              <TableColumn fx:id="BMnum" prefWidth="118.33332824707031" text="管理员编号" />
+                              <TableColumn fx:id="BMname" prefWidth="77.66668701171875" text="姓名" />
+                              <TableColumn fx:id="BMpswd" prefWidth="157.99996948242188" text="密码" />
+                              <TableColumn fx:id="BMphone" prefWidth="153.00003051757812" text="电话" />
+                              <TableColumn fx:id="BMsex" prefWidth="68.99996948242188" text="性别" />
+                              <TableColumn fx:id="BMsalary" prefWidth="74.33331298828125" text="月薪" />
+                              <TableColumn fx:id="Lname" prefWidth="150.0" text="隶属图书馆" />
+                          </columns>
+                      </TableView>
+                      <Button layoutX="594.0" layoutY="54.0" mnemonicParsing="false" onMouseClicked="#UMbookmanageshowall" prefHeight="29.0" prefWidth="157.0" text="查看所有" />
+                      <Label layoutX="276.0" layoutY="19.0" text="图书馆：">
+                          <font>
+                              <Font size="18.0" />
+                          </font>
+                      </Label>
+                      <ChoiceBox fx:id="bookmanagerlib" layoutX="356.0" layoutY="19.0" prefHeight="23.0" prefWidth="185.0">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="江大图书馆" />
+                                  <String fx:value="北固图书馆" />
+                              </FXCollections>
+                          </items>
+                      </ChoiceBox>
+                  </children></AnchorPane>
+          </content>
+      </Tab>
+
+    <Tab text="图  书  管  理  员  管  理">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                      <ImageView fitHeight="577.0" fitWidth="861.0" layoutX="-30.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../resource/beijin.png" />
+                          </image>
+                      </ImageView>
+                      <Button layoutX="533.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#UMbookmanagexecute" prefHeight="28.0" prefWidth="100.0" text="执    行">
+                          <font>
+                              <Font size="13.0" />
+                          </font></Button>
+                      <Label layoutX="14.0" layoutY="57.0" text="编       号：">
+                          <font>
+                              <Font size="18.0" />
+                          </font></Label>
+                      <TextField fx:id="managebmnum" layoutX="104.0" layoutY="57.0" prefWidth="150.0" />
+                      <Label layoutX="14.0" layoutY="19.0" text="选择操作：">
+                          <font>
+                              <Font size="18.0" />
+                          </font>
+                      </Label>
+                      <ChoiceBox fx:id="searchkind4" layoutX="104.0" layoutY="19.0" prefWidth="150.0">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="增加" />
+                                  <String fx:value="修改" />
+                                  <String fx:value="删除" />
+                              </FXCollections>
+                          </items>
+                      </ChoiceBox>
+                      <TableView fx:id="manageBMusertable" layoutY="181.0" onMouseClicked="#UMbookmanagemanagetableclick" opacity="0.95" prefHeight="390.0" prefWidth="800.0">
+                          <columns>
+                              <TableColumn fx:id="BMnum2" prefWidth="118.33332824707031" text="管理员编号" />
+                              <TableColumn fx:id="BMname2" prefWidth="77.66668701171875" text="姓名" />
+                              <TableColumn fx:id="BMpswd2" prefWidth="157.99996948242188" text="密码" />
+                              <TableColumn fx:id="BMphone2" prefWidth="153.00003051757812" text="电话" />
+                              <TableColumn fx:id="BMsex2" prefWidth="68.99996948242188" text="性别" />
+                              <TableColumn fx:id="BMsalary2" prefWidth="74.33331298828125" text="月薪" />
+                              <TableColumn fx:id="Lname2" prefWidth="150.0" text="隶属图书馆" />
+                          </columns>
+                      </TableView>
+                      <Button layoutX="664.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#UMbookmanageshowall2" prefHeight="29.0" prefWidth="100.0" text="查看所有用户">
+                          <font>
+                              <Font size="13.0" />
+                          </font></Button>
+                      <Label layoutX="270.0" layoutY="57.0" text="姓      名：">
+                          <font>
+                              <Font size="18.0" />
+                          </font>
+                      </Label>
+                      <TextField fx:id="managebmname" layoutX="352.0" layoutY="57.0" prefWidth="150.0" />
+                      <TextField fx:id="managebmphone" layoutX="104.0" layoutY="97.0" prefWidth="150.0" />
+                      <TextField fx:id="managebmsex" layoutX="352.0" layoutY="97.0" prefWidth="150.0" />
+                      <TextField fx:id="managelname" editable="false" layoutX="122.0" layoutY="138.0" prefHeight="23.0" prefWidth="642.0" />
+                      <TextField fx:id="managebmsalary" layoutX="614.0" layoutY="95.0" prefWidth="150.0" />
+                      <TextField fx:id="managebmpswd" layoutX="614.0" layoutY="57.0" prefWidth="150.0" />
+                      <Label layoutX="16.0" layoutY="97.0" text="电      话：">
+                          <font>
+                              <Font size="18.0" />
+                          </font>
+                      </Label>
+                      <Label layoutX="14.0" layoutY="138.0" text="隶属图书馆：">
+                          <font>
+                              <Font size="18.0" />
+                          </font></Label>
+                      <Label layoutX="271.0" layoutY="97.0" text="性      别：">
+                          <font>
+                              <Font size="18.0" />
+                          </font></Label>
+                      <Label layoutX="530.0" layoutY="57.0" text="密       码：">
+                          <font>
+                              <Font size="18.0" />
+                          </font>
+                      </Label>
+                      <Label layoutX="532.0" layoutY="97.0" text="月      薪：">
+                          <font>
+                              <Font size="18.0" />
+                          </font></Label>
+                      <Label layoutX="267.0" layoutY="19.0" text="所选用户名：">
+                          <font>
+                              <Font size="18.0" />
+                          </font>
+                      </Label>
+                      <Label fx:id="selectbmname" layoutX="372.0" layoutY="21.0" text="尚未选择">
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                      </Label>
+                  </children></AnchorPane>
+          </content>
+      </Tab>
+
+    <Tab text="个  人  信  息 ">
+          <content>
+              <AnchorPane fx:id="Sborrownum" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <ImageView fitHeight="577.0" fitWidth="861.0" layoutX="-30.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                       <image>
+                           <Image url="@../resource/beijin.png" />
+                       </image>
+                   </ImageView>
+                  <Label layoutX="248.0" layoutY="30.0" text="管理员编号：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="umnum" layoutX="388.0" layoutY="30.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="248.0" layoutY="68.0" text="姓          名：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="umname" layoutX="388.0" layoutY="68.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="248.0" layoutY="103.0" text="工          资：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="umsalary" layoutX="388.0" layoutY="103.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="248.0" layoutY="137.0" text="电          话：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="umphone" layoutX="388.0" layoutY="137.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="248.0" layoutY="173.0" text="性          别：">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="umsex" layoutX="388.0" layoutY="173.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="248.0" layoutY="276.0" mnemonicParsing="false" onMouseClicked="#relogin" prefHeight="71.0" prefWidth="192.0" text="重新登录">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="120.0" fitWidth="130.0" layoutX="65.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/nanhaitouxiang.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+          </content>
+      </Tab>
+
+  </tabs>
+</TabPane>

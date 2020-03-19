@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="我 要 借 书">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView layoutY="-2.0" prefHeight="373.0" prefWidth="318.0" />
+                  <Button layoutX="345.0" layoutY="262.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="92.0" text="按 书 名 查 找" />
+                   <Button layoutX="474.0" layoutY="262.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="104.0" text="按 类 别 查 找" />
+                  <ChoiceBox layoutX="414.0" layoutY="125.0" prefHeight="33.0" prefWidth="172.0" />
+                  <Label layoutX="327.0" layoutY="130.0" text="图书类别">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="345.0" layoutY="189.0" text="书名">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <TextField layoutX="414.0" layoutY="185.0" prefHeight="32.0" prefWidth="171.0" />
+                  <Text fill="#189bb8" fontSmoothingType="LCD" layoutX="408.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="图 书 查 询" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="我 的 借 阅">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="220.0" layoutY="14.0" text="我   的   借   阅" textFill="#379dcd">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="-8.0" layoutY="61.0" prefHeight="317.0" prefWidth="611.0">
+                    <columns>
+                      <TableColumn prefWidth="78.66667413711548" text="图书编号" />
+                      <TableColumn prefWidth="67.99996185302734" text="图书类别" />
+                        <TableColumn prefWidth="188.0000457763672" text="书名" />
+                        <TableColumn minWidth="9.999969482421875" prefWidth="70.99996948242188" text="作者" />
+                        <TableColumn prefWidth="85.0" text="出版社" />
+                        <TableColumn prefWidth="50.333282470703125" text="价格" />
+                        <TableColumn prefWidth="72.3333740234375" text="剩余数目" />
+                        <TableColumn prefWidth="72.3333740234375" text="剩余数目" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="我 要 还书">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
